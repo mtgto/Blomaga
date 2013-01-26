@@ -34,6 +34,8 @@
 	// Do any additional setup after loading the view.
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
     [self.imageView addGestureRecognizer:tapGestureRecognizer];
+    UITapGestureRecognizer *bgTapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundTapped:)];
+    [self.view addGestureRecognizer:bgTapGestureRecognizer];
 
     NicoAPIClient *apiClient = [[NicoAPIClient alloc] init];
     [apiClient getNewArticleSuccess:^(NicoAPIClient *client, NSDictionary *parameters) {
@@ -67,10 +69,22 @@
     NicoAPIClient *apiClient = [[NicoAPIClient alloc] init];
     [apiClient sendArticle:article
                    success:^(NicoAPIClient *client) {
+                       [self.navigationController dismissViewControllerAnimated:YES completion:^{
 
+                       }];
                    } failure:^(NicoAPIClient *client) {
 
                    }];
+}
+
+- (IBAction)doneTextEditing:(id)sender {
+    [sender resignFirstResponder];
+}
+
+- (void)backgroundTapped:(id)sender
+{
+    [self.textView resignFirstResponder];
+    [self.titleField resignFirstResponder];
 }
 
 - (void)imageTapped:(id)sender {

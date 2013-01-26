@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)pushPost:(id)sender;
+- (IBAction)doneTextEditing:(id)sender;
 
 @end
