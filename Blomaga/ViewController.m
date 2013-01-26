@@ -22,7 +22,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.portalUrl = [NSURL URLWithString:@"http://sp.ch.nicovideo.jp/portal/blomaga"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
-    self.title = @"AAA";
 }
 
 - (void)didReceiveMemoryWarning
