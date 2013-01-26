@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B48F0E2E74F4509AF6B049E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EADD1B8C5E4896B198D084 /* libPods.a */; };
+		66F9F877A1D74F92B798A5D0 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E41B217597443AB86E8D46 /* libPods-Tests.a */; };
 		CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
 		CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
 		CEA2610216B37945005793E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2610116B37945005793E6 /* CoreGraphics.framework */; };
@@ -19,9 +21,17 @@
 		CEA2611716B37945005793E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA2611516B37945005793E6 /* MainStoryboard_iPhone.storyboard */; };
 		CEA2611A16B37945005793E6 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA2611816B37945005793E6 /* MainStoryboard_iPad.storyboard */; };
 		CEA2611D16B37945005793E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2611C16B37945005793E6 /* ViewController.m */; };
+		CEA2612D16B37A2B005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
+		CEA2612E16B37A2B005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
+		CEA2612F16B37A2B005793E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2610116B37945005793E6 /* CoreGraphics.framework */; };
+		CEA2613516B37A2B005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2613316B37A2B005793E6 /* InfoPlist.strings */; };
+		CEA2613716B37A2B005793E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2613616B37A2B005793E6 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0429C3FFB1C94A4B9AC787D1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		41E41B217597443AB86E8D46 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C19635D4D3430B808ECE0F /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		CEA260F916B37945005793E6 /* Blomaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blomaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA260FD16B37945005793E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA260FF16B37945005793E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +49,12 @@
 		CEA2611916B37945005793E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		CEA2611B16B37945005793E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CEA2611C16B37945005793E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CEA2612B16B37A2B005793E6 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA2613216B37A2B005793E6 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		CEA2613416B37A2B005793E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CEA2613616B37A2B005793E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CEA2613816B37A2B005793E6 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		F9EADD1B8C5E4896B198D084 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +65,18 @@
 				CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */,
 				CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */,
 				CEA2610216B37945005793E6 /* CoreGraphics.framework in Frameworks */,
+				2B48F0E2E74F4509AF6B049E /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA2612816B37A2B005793E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA2612D16B37A2B005793E6 /* UIKit.framework in Frameworks */,
+				CEA2612E16B37A2B005793E6 /* Foundation.framework in Frameworks */,
+				CEA2612F16B37A2B005793E6 /* CoreGraphics.framework in Frameworks */,
+				66F9F877A1D74F92B798A5D0 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,8 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				CEA2610316B37945005793E6 /* Blomaga */,
+				CEA2613016B37A2B005793E6 /* Tests */,
 				CEA260FC16B37945005793E6 /* Frameworks */,
 				CEA260FA16B37945005793E6 /* Products */,
+				0429C3FFB1C94A4B9AC787D1 /* Pods.xcconfig */,
+				C9C19635D4D3430B808ECE0F /* Pods-Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA260F916B37945005793E6 /* Blomaga.app */,
+				CEA2612B16B37A2B005793E6 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +110,8 @@
 				CEA260FD16B37945005793E6 /* UIKit.framework */,
 				CEA260FF16B37945005793E6 /* Foundation.framework */,
 				CEA2610116B37945005793E6 /* CoreGraphics.framework */,
+				F9EADD1B8C5E4896B198D084 /* libPods.a */,
+				41E41B217597443AB86E8D46 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,6 +144,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CEA2613016B37A2B005793E6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CEA2613116B37A2B005793E6 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CEA2613116B37A2B005793E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CEA2613216B37A2B005793E6 /* Tests-Info.plist */,
+				CEA2613316B37A2B005793E6 /* InfoPlist.strings */,
+				CEA2613616B37A2B005793E6 /* main.m */,
+				CEA2613816B37A2B005793E6 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -120,6 +173,7 @@
 				CEA260F516B37945005793E6 /* Sources */,
 				CEA260F616B37945005793E6 /* Frameworks */,
 				CEA260F716B37945005793E6 /* Resources */,
+				5F0E93084BA6495FB5127526 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +182,24 @@
 			name = Blomaga;
 			productName = Blomaga;
 			productReference = CEA260F916B37945005793E6 /* Blomaga.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEA2612A16B37A2B005793E6 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEA2614416B37A2B005793E6 /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				CEA2612716B37A2B005793E6 /* Sources */,
+				CEA2612816B37A2B005793E6 /* Frameworks */,
+				CEA2612916B37A2B005793E6 /* Resources */,
+				ECE5992EF9F34024B2A44712 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = CEA2612B16B37A2B005793E6 /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,6 +224,7 @@
 			projectRoot = "";
 			targets = (
 				CEA260F816B37945005793E6 /* Blomaga */,
+				CEA2612A16B37A2B005793E6 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -170,7 +243,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEA2612916B37A2B005793E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA2613516B37A2B005793E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F0E93084BA6495FB5127526 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+		ECE5992EF9F34024B2A44712 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEA260F516B37945005793E6 /* Sources */ = {
@@ -180,6 +292,14 @@
 				CEA2610A16B37945005793E6 /* main.m in Sources */,
 				CEA2610E16B37945005793E6 /* AppDelegate.m in Sources */,
 				CEA2611D16B37945005793E6 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEA2612716B37A2B005793E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEA2613716B37A2B005793E6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +328,14 @@
 				CEA2611916B37945005793E6 /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		CEA2613316B37A2B005793E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEA2613416B37A2B005793E6 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -267,6 +395,7 @@
 		};
 		CEA2612116B37945005793E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0429C3FFB1C94A4B9AC787D1 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blomaga/Blomaga-Prefix.pch";
@@ -278,10 +407,37 @@
 		};
 		CEA2612216B37945005793E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0429C3FFB1C94A4B9AC787D1 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Blomaga/Blomaga-Prefix.pch";
 				INFOPLIST_FILE = "Blomaga/Blomaga-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CEA2614216B37A2B005793E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C19635D4D3430B808ECE0F /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CEA2614316B37A2B005793E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C19635D4D3430B808ECE0F /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -306,6 +462,16 @@
 				CEA2612216B37945005793E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEA2614416B37A2B005793E6 /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEA2614216B37A2B005793E6 /* Debug */,
+				CEA2614316B37A2B005793E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
