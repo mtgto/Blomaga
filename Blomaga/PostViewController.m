@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) NSDictionary *parameters;
 
+@property (nonatomic, copy) NSString *imageUrl;
+
 @end
 
 @implementation PostViewController
@@ -49,9 +51,13 @@
 }
 
 - (IBAction)pushPost:(id)sender {
+    NSString *body = self.textView.text;
+    if (self.imageUrl) {
+        body = [body stringByAppendingFormat:@"<br><br><img src=\"%@\" height=\"400px\" style=\"\">", self.imageUrl];
+    }
     Article *article = [[Article alloc] initWithId:self.parameters[@"article_id"]
                                            subject:self.titleField.text
-                                              body:self.textView.text
+                                              body:body
                                             blogId:self.parameters[@"blog_id"]
                                          channelId:self.parameters[@"channel_id"]
                                         screenName:self.parameters[@"screen_name"]
@@ -83,9 +89,24 @@
 {
     DDLogVerbose(@"didFinishPickingMediaWithInfo");
     UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+
     [self dismissViewControllerAnimated:YES completion:^{
+        NSData *data = UIImageJPEGRepresentation(originalImage, 0.5f);
+        NicoAPIClient *apiClient = [[NicoAPIClient alloc] init];
+        [apiClient sendImageData:data
+                       channelId:self.parameters[@"channel_id"]
+                       articleId:self.parameters[@"article_id"]
+                           token:self.parameters[@"key"]
+                            time:self.parameters[@"time"]
+                         success:^(NicoAPIClient *client, NSString *imageUrl) {
+                             self.imageUrl = imageUrl;
+        }
+                         failure:^(NicoAPIClient *client) {
+            
+        }];
     }];
 }
+
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {

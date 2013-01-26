@@ -8,6 +8,7 @@
 
 #import "NicoAPIClient.h"
 #import "AFNicoAPIClient.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface NicoAPIClient()
 @property (nonatomic, strong) AFNicoAPIClient *apiClient;
@@ -53,6 +54,30 @@
                         DDLogVerbose(@"failure: %@", error);
                         failure(self);
     }];
+}
+
+- (void)sendImageData:(NSData *)imageData channelId:(NSString *)channelId articleId:(NSString *)articleId token:(NSString *)token time:(NSString *)time success:(void (^)(NicoAPIClient *client, NSString *imageUrl))success failure:(void (^)(NicoAPIClient *client))failure
+{
+    id hoge = imageData;
+    NSMutableURLRequest *request = [self.apiClient multipartFormRequestWithMethod:@"POST"
+                                                                             path:@"/api/blomaga/upload.articleimage"
+                                                                       parameters:nil
+                                                        constructingBodyWithBlock: ^(id<AFMultipartFormData> formData) {
+                                                            [formData appendPartWithFormData:[channelId dataUsingEncoding:NSUTF8StringEncoding] name:@"channel_id"];
+                                                            [formData appendPartWithFormData:[articleId dataUsingEncoding:NSUTF8StringEncoding] name:@"article_id"];
+                                                            [formData appendPartWithFormData:[token dataUsingEncoding:NSUTF8StringEncoding] name:@"csrf_token"];
+                                                            [formData appendPartWithFormData:[time dataUsingEncoding:NSUTF8StringEncoding] name:@"csrf_token_time"];
+                                                            [formData appendPartWithFileData:[NSData dataWithData:imageData] name:@"file" fileName:@"file_name" mimeType:@"application/octet-stream"];
+                                                        }];
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        DDLogVerbose(@"json = %@", JSON);
+        NSDictionary *parameters = (NSDictionary *)JSON;
+        success(self, parameters[@"src"]);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        DDLogVerbose(@"failure: %@", error);
+        failure(self);
+    }];
+    [operation start];
 }
 
 - (void)sendArticle:(Article *)article success:(void (^)(NicoAPIClient *client))success failure:(void (^)(NicoAPIClient *client))failure
