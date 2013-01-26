@@ -26,6 +26,8 @@
 		CEA2612F16B37A2B005793E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2610116B37945005793E6 /* CoreGraphics.framework */; };
 		CEA2613516B37A2B005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2613316B37A2B005793E6 /* InfoPlist.strings */; };
 		CEA2613716B37A2B005793E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2613616B37A2B005793E6 /* main.m */; };
+		CEA2616616B3932F005793E6 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2616516B3932F005793E6 /* PostViewController.m */; };
+		CEA2616916B39601005793E6 /* chooseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA2616816B39601005793E6 /* chooseImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		CEA2613416B37A2B005793E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEA2613616B37A2B005793E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CEA2613816B37A2B005793E6 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		CEA2616416B3932F005793E6 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
+		CEA2616516B3932F005793E6 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
+		CEA2616816B39601005793E6 /* chooseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseImage.png; sourceTree = "<group>"; };
 		F9EADD1B8C5E4896B198D084 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -125,6 +130,8 @@
 				CEA2611816B37945005793E6 /* MainStoryboard_iPad.storyboard */,
 				CEA2611B16B37945005793E6 /* ViewController.h */,
 				CEA2611C16B37945005793E6 /* ViewController.m */,
+				CEA2616416B3932F005793E6 /* PostViewController.h */,
+				CEA2616516B3932F005793E6 /* PostViewController.m */,
 				CEA2610416B37945005793E6 /* Supporting Files */,
 			);
 			path = Blomaga;
@@ -137,6 +144,7 @@
 				CEA2610616B37945005793E6 /* InfoPlist.strings */,
 				CEA2610916B37945005793E6 /* main.m */,
 				CEA2610B16B37945005793E6 /* Blomaga-Prefix.pch */,
+				CEA2616816B39601005793E6 /* chooseImage.png */,
 				CEA2610F16B37945005793E6 /* Default.png */,
 				CEA2611116B37945005793E6 /* Default@2x.png */,
 				CEA2611316B37945005793E6 /* Default-568h@2x.png */,
@@ -240,6 +248,7 @@
 				CEA2611416B37945005793E6 /* Default-568h@2x.png in Resources */,
 				CEA2611716B37945005793E6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CEA2611A16B37945005793E6 /* MainStoryboard_iPad.storyboard in Resources */,
+				CEA2616916B39601005793E6 /* chooseImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +301,7 @@
 				CEA2610A16B37945005793E6 /* main.m in Sources */,
 				CEA2610E16B37945005793E6 /* AppDelegate.m in Sources */,
 				CEA2611D16B37945005793E6 /* ViewController.m in Sources */,
+				CEA2616616B3932F005793E6 /* PostViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
