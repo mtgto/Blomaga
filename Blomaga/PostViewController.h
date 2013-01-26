@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PostViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *titleField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)pushPost:(id)sender;

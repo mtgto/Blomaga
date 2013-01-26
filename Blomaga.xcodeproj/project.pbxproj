@@ -11,7 +11,6 @@
 		66F9F877A1D74F92B798A5D0 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E41B217597443AB86E8D46 /* libPods-Tests.a */; };
 		CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
 		CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
-		CEA2610216B37945005793E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2610116B37945005793E6 /* CoreGraphics.framework */; };
 		CEA2610816B37945005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2610616B37945005793E6 /* InfoPlist.strings */; };
 		CEA2610A16B37945005793E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2610916B37945005793E6 /* main.m */; };
 		CEA2610E16B37945005793E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2610D16B37945005793E6 /* AppDelegate.m */; };
@@ -23,11 +22,14 @@
 		CEA2611D16B37945005793E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2611C16B37945005793E6 /* ViewController.m */; };
 		CEA2612D16B37A2B005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
 		CEA2612E16B37A2B005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
-		CEA2612F16B37A2B005793E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2610116B37945005793E6 /* CoreGraphics.framework */; };
 		CEA2613516B37A2B005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2613316B37A2B005793E6 /* InfoPlist.strings */; };
 		CEA2613716B37A2B005793E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2613616B37A2B005793E6 /* main.m */; };
 		CEA2616616B3932F005793E6 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2616516B3932F005793E6 /* PostViewController.m */; };
 		CEA2616916B39601005793E6 /* chooseImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA2616816B39601005793E6 /* chooseImage.png */; };
+		CEA2617016B39DCA005793E6 /* NicoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2616F16B39DCA005793E6 /* NicoAPIClient.m */; };
+		CEA2617316B39F7F005793E6 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2617216B39F7F005793E6 /* Article.m */; };
+		CEA2617616B3A33C005793E6 /* AFNicoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA2617516B3A33C005793E6 /* AFNicoAPIClient.m */; };
+		CEA2618416B3A758005793E6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA2618316B3A758005793E6 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +39,6 @@
 		CEA260F916B37945005793E6 /* Blomaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blomaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA260FD16B37945005793E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA260FF16B37945005793E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CEA2610116B37945005793E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CEA2610516B37945005793E6 /* Blomaga-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blomaga-Info.plist"; sourceTree = "<group>"; };
 		CEA2610716B37945005793E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CEA2610916B37945005793E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +60,13 @@
 		CEA2616416B3932F005793E6 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostViewController.h; sourceTree = "<group>"; };
 		CEA2616516B3932F005793E6 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostViewController.m; sourceTree = "<group>"; };
 		CEA2616816B39601005793E6 /* chooseImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chooseImage.png; sourceTree = "<group>"; };
+		CEA2616E16B39DCA005793E6 /* NicoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NicoAPIClient.h; sourceTree = "<group>"; };
+		CEA2616F16B39DCA005793E6 /* NicoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NicoAPIClient.m; sourceTree = "<group>"; };
+		CEA2617116B39F7F005793E6 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		CEA2617216B39F7F005793E6 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		CEA2617416B3A33C005793E6 /* AFNicoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNicoAPIClient.h; sourceTree = "<group>"; };
+		CEA2617516B3A33C005793E6 /* AFNicoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNicoAPIClient.m; sourceTree = "<group>"; };
+		CEA2618316B3A758005793E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F9EADD1B8C5E4896B198D084 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,9 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA2618416B3A758005793E6 /* CoreGraphics.framework in Frameworks */,
 				CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */,
 				CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */,
-				CEA2610216B37945005793E6 /* CoreGraphics.framework in Frameworks */,
 				2B48F0E2E74F4509AF6B049E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +88,6 @@
 			files = (
 				CEA2612D16B37A2B005793E6 /* UIKit.framework in Frameworks */,
 				CEA2612E16B37A2B005793E6 /* Foundation.framework in Frameworks */,
-				CEA2612F16B37A2B005793E6 /* CoreGraphics.framework in Frameworks */,
 				66F9F877A1D74F92B798A5D0 /* libPods-Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,9 +119,9 @@
 		CEA260FC16B37945005793E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEA2618316B3A758005793E6 /* CoreGraphics.framework */,
 				CEA260FD16B37945005793E6 /* UIKit.framework */,
 				CEA260FF16B37945005793E6 /* Foundation.framework */,
-				CEA2610116B37945005793E6 /* CoreGraphics.framework */,
 				F9EADD1B8C5E4896B198D084 /* libPods.a */,
 				41E41B217597443AB86E8D46 /* libPods-Tests.a */,
 			);
@@ -132,6 +139,12 @@
 				CEA2611C16B37945005793E6 /* ViewController.m */,
 				CEA2616416B3932F005793E6 /* PostViewController.h */,
 				CEA2616516B3932F005793E6 /* PostViewController.m */,
+				CEA2617416B3A33C005793E6 /* AFNicoAPIClient.h */,
+				CEA2617516B3A33C005793E6 /* AFNicoAPIClient.m */,
+				CEA2617116B39F7F005793E6 /* Article.h */,
+				CEA2617216B39F7F005793E6 /* Article.m */,
+				CEA2616E16B39DCA005793E6 /* NicoAPIClient.h */,
+				CEA2616F16B39DCA005793E6 /* NicoAPIClient.m */,
 				CEA2610416B37945005793E6 /* Supporting Files */,
 			);
 			path = Blomaga;
@@ -302,6 +315,9 @@
 				CEA2610E16B37945005793E6 /* AppDelegate.m in Sources */,
 				CEA2611D16B37945005793E6 /* ViewController.m in Sources */,
 				CEA2616616B3932F005793E6 /* PostViewController.m in Sources */,
+				CEA2617016B39DCA005793E6 /* NicoAPIClient.m in Sources */,
+				CEA2617316B39F7F005793E6 /* Article.m in Sources */,
+				CEA2617616B3A33C005793E6 /* AFNicoAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
