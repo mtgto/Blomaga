@@ -1,82 +1,86 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="vBw-Y8-1eG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vr4-R4-pCD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="4">
+        <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="KrT-PH-yS8">
-                                <rect key="frame" x="0.0" y="916" width="768" height="44"/>
+                            <webView contentMode="scaleToFill" id="zch-gB-W7P">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="BsD-k1-EzD"/>
+                                </connections>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="aC9-A0-Y8e">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem image="glyphicons_020_home.png" style="plain" id="UFO-2F-QFV">
+                                    <barButtonItem image="glyphicons_020_home.png" style="plain" id="gAn-Mq-VK3">
                                         <connections>
-                                            <action selector="pushHome:" destination="2" id="MMY-Mb-5SY"/>
+                                            <action selector="pushHome:" destination="2" id="71c-Ya-gNJ"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="hS2-WT-Ic8"/>
-                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="UZc-Q8-wJz">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Gqk-TJ-A0Y"/>
+                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="hy0-v1-DSy">
                                         <connections>
-                                            <action selector="goBack" destination="gM7-EW-0S0" id="rkF-65-lPq"/>
+                                            <action selector="goBack" destination="zch-gB-W7P" id="NBu-BY-tUy"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cw8-YW-sXT"/>
-                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="xEK-9x-XS9">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4fH-Vi-dPm"/>
+                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="TT3-fC-dge">
                                         <connections>
-                                            <action selector="goForward" destination="gM7-EW-0S0" id="yMv-1e-qBu"/>
+                                            <action selector="goForward" destination="zch-gB-W7P" id="dRY-R1-xsx"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qc9-eE-sbO"/>
-                                    <barButtonItem image="glyphicons_195_circle_info.png" style="plain" id="JLl-wf-3Lt">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I1O-Mp-NtI"/>
+                                    <barButtonItem image="glyphicons_195_circle_info.png" style="plain" id="co9-fP-tJh">
                                         <connections>
-                                            <segue destination="ZCl-kW-ytL" kind="push" id="kaZ-GN-d3f"/>
+                                            <segue destination="tbD-lc-SIT" kind="push" id="GDA-At-4JK"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <webView contentMode="scaleToFill" id="gM7-EW-0S0">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="uwh-Ih-O52">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="fZe-jU-vfc">
+                    <navigationItem key="navigationItem" id="8cN-tL-Sln">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Imo-g6-brY">
                             <connections>
-                                <segue destination="LbT-tk-oUj" kind="push" id="9ve-WL-4VB"/>
+                                <segue destination="nEx-pL-z9v" kind="push" id="IOX-eo-KUg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="webView" destination="gM7-EW-0S0" id="zuV-ID-1l4"/>
+                        <outlet property="webView" destination="zch-gB-W7P" id="GPN-5K-LTE"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="380" y="-268"/>
+            <point key="canvasLocation" x="481" y="172"/>
         </scene>
-        <!--View Controller - License-->
-        <scene sceneID="c1g-jt-5pJ">
+        <!--View Controller - ライセンス表記-->
+        <scene sceneID="62D-JC-dtP">
             <objects>
-                <viewController id="ZCl-kW-ytL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3Qh-lc-5jS">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                <viewController id="tbD-lc-SIT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJE-cM-pCy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="eGy-R5-4sf">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Dfk-bk-24d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">AFNetworking
+                                <string key="text">AFNetworking
 
 Copyright (c) 2011 Gowalla (http://gowalla.com/)
 
@@ -154,57 +158,57 @@ THE SOFTWARE.
 GLYPHICONS
 http://www.glyphicons.com/
 
-</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="License" id="KQE-dk-Ahe"/>
+                    <navigationItem key="navigationItem" title="ライセンス表記" id="lLf-7d-UH7"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="11S-CF-7zu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5y-Iy-dxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="881"/>
+            <point key="canvasLocation" x="911" y="833"/>
         </scene>
         <!--Post View Controller-->
-        <scene sceneID="gxm-He-V7H">
+        <scene sceneID="Jtq-y7-8RO">
             <objects>
-                <viewController id="LbT-tk-oUj" customClass="PostViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zkI-iM-GGs">
-                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                <viewController id="nEx-pL-z9v" customClass="PostViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UIz-YZ-qK6">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="g6M-B4-rW7">
-                                <rect key="frame" x="20" y="162" width="728" height="356"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sRI-jK-suQ">
+                                <rect key="frame" x="20" y="105" width="280" height="161"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView contentMode="scaleAspectFit" image="chooseImage.png" id="avm-v3-oaY">
-                                <rect key="frame" x="184" y="584" width="400" height="356"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <imageView contentMode="scaleAspectFit" image="chooseImage.png" id="unJ-2n-FaC">
+                                <rect key="frame" x="20" y="274" width="280" height="210"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Article title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jR-f1-WmY">
-                                <rect key="frame" x="20" y="66" width="84" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="記事のタイトル：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oHK-do-l3l">
+                                <rect key="frame" x="20" y="9" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" id="YNo-J8-Xeg">
-                                <rect key="frame" x="20" y="95" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" minimumFontSize="17" id="IdL-9P-UwK">
+                                <rect key="frame" x="20" y="38" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="doneTextEditing:" destination="LbT-tk-oUj" eventType="editingDidEnd" id="GKl-kE-XAn"/>
+                                    <action selector="doneTextEditing:" destination="nEx-pL-z9v" eventType="editingDidEnd" id="phL-4H-ybS"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Article body:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mUM-ED-7J9">
-                                <rect key="frame" x="20" y="133" width="102" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="本文：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zq1-PJ-cUI">
+                                <rect key="frame" x="20" y="76" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -213,37 +217,37 @@ http://www.glyphicons.com/
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="nLf-YE-JuF">
-                        <barButtonItem key="rightBarButtonItem" title="投稿" id="g7Q-1s-jQ5">
+                    <navigationItem key="navigationItem" id="qfa-E3-DEP">
+                        <barButtonItem key="rightBarButtonItem" title="投稿" id="xEd-Us-HzD">
                             <connections>
-                                <action selector="pushPost:" destination="LbT-tk-oUj" id="qEG-FG-9Gm"/>
+                                <action selector="pushPost:" destination="nEx-pL-z9v" id="49o-dH-m0q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageView" destination="avm-v3-oaY" id="UAh-Vx-cMe"/>
-                        <outlet property="textView" destination="g6M-B4-rW7" id="3g1-sA-lS4"/>
-                        <outlet property="titleField" destination="YNo-J8-Xeg" id="7o5-3Z-6Fn"/>
+                        <outlet property="imageView" destination="unJ-2n-FaC" id="bQU-EH-Nvc"/>
+                        <outlet property="textView" destination="sRI-jK-suQ" id="Lhl-Fr-W0m"/>
+                        <outlet property="titleField" destination="IdL-9P-UwK" id="zdK-sy-aXB"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bag-Mi-eLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuZ-6P-JSL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="-268"/>
+            <point key="canvasLocation" x="911" y="172"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="icJ-6n-J9C">
+        <scene sceneID="6qm-hg-ZYX">
             <objects>
-                <navigationController definesPresentationContext="YES" id="vBw-Y8-1eG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="3yn-vg-h7t">
+                <navigationController definesPresentationContext="YES" id="vr4-R4-pCD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="lcy-QT-D7z">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="Kas-kV-eQE"/>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="ad6-j7-it1"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aJn-iR-fri" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgf-uu-feV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-512" y="-268"/>
+            <point key="canvasLocation" x="-16" y="172"/>
         </scene>
     </scenes>
     <resources>
@@ -273,8 +277,8 @@ http://www.glyphicons.com/
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

@@ -85,6 +85,9 @@
 		CEA261DC16B5824C005793E6 /* glyphicons_207_remove_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_207_remove_2.png; sourceTree = "<group>"; };
 		CEA261DF16B5887F005793E6 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
 		CEA261E116B58898005793E6 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
+		CEA261EC16B59406005793E6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		CEA261ED16B59406005793E6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		CEA261EE16B59406005793E6 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F9EADD1B8C5E4896B198D084 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -266,6 +269,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ja,
 			);
 			mainGroup = CEA260EE16B37945005793E6;
 			productRefGroup = CEA260FA16B37945005793E6 /* Products */;
@@ -372,6 +376,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEA2610716B37945005793E6 /* en */,
+				CEA261EE16B59406005793E6 /* ja */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -380,6 +385,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEA2611616B37945005793E6 /* en */,
+				CEA261EC16B59406005793E6 /* ja */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEA2611916B37945005793E6 /* en */,
+				CEA261ED16B59406005793E6 /* ja */,
 			);
 			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";

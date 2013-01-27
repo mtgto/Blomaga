@@ -48,6 +48,7 @@
     [apiClient getNewArticleSuccess:^(NicoAPIClient *client, NSDictionary *parameters) {
         if (!parameters[@"article_id"]) {
             // No authentication to write new article
+            
         }
         self.parameters = parameters;
         DDLogVerbose(@"success");
@@ -96,7 +97,7 @@
                                    [hud hide:YES afterDelay:1.0f];
                                    hud.mode = MBProgressHUDModeCustomView;
                                    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
-                                   [self.navigationController dismissViewControllerAnimated:YES completion:^{
+                                   [self.parentViewController dismissViewControllerAnimated:YES completion:^{
 
                                    }];
                                }

@@ -68,7 +68,7 @@
             </objects>
             <point key="canvasLocation" x="481" y="172"/>
         </scene>
-        <!--View Controller - ライセンス表記-->
+        <!--View Controller - License-->
         <scene sceneID="62D-JC-dtP">
             <objects>
                 <viewController id="tbD-lc-SIT" sceneMemberID="viewController">
@@ -166,7 +166,7 @@ http://www.glyphicons.com/
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ライセンス表記" id="lLf-7d-UH7"/>
+                    <navigationItem key="navigationItem" title="License" id="lLf-7d-UH7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j5y-Iy-dxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,7 +180,7 @@ http://www.glyphicons.com/
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="iPhoneからの投稿" id="sRI-jK-suQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sRI-jK-suQ">
                                 <rect key="frame" x="20" y="105" width="280" height="161"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -191,14 +191,14 @@ http://www.glyphicons.com/
                                 <rect key="frame" x="20" y="274" width="280" height="210"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="記事のタイトル：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oHK-do-l3l">
-                                <rect key="frame" x="20" y="9" width="136" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Article title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oHK-do-l3l">
+                                <rect key="frame" x="20" y="9" width="84" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" minimumFontSize="17" id="IdL-9P-UwK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" id="IdL-9P-UwK">
                                 <rect key="frame" x="20" y="38" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -207,8 +207,8 @@ http://www.glyphicons.com/
                                     <action selector="doneTextEditing:" destination="nEx-pL-z9v" eventType="editingDidEnd" id="phL-4H-ybS"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="本文：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zq1-PJ-cUI">
-                                <rect key="frame" x="20" y="76" width="51" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Article body:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zq1-PJ-cUI">
+                                <rect key="frame" x="20" y="76" width="99" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -218,7 +218,7 @@ http://www.glyphicons.com/
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="qfa-E3-DEP">
-                        <barButtonItem key="rightBarButtonItem" title="投稿" id="xEd-Us-HzD">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="xEd-Us-HzD">
                             <connections>
                                 <action selector="pushPost:" destination="nEx-pL-z9v" id="49o-dH-m0q"/>
                             </connections>

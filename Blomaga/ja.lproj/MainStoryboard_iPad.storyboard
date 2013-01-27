@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="380" y="-268"/>
         </scene>
-        <!--View Controller - License-->
+        <!--View Controller - ライセンス表記-->
         <scene sceneID="c1g-jt-5pJ">
             <objects>
                 <viewController id="ZCl-kW-ytL" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">AFNetworking
+                                <string key="text">AFNetworking
 
 Copyright (c) 2011 Gowalla (http://gowalla.com/)
 
@@ -154,7 +154,7 @@ THE SOFTWARE.
 GLYPHICONS
 http://www.glyphicons.com/
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
@@ -162,7 +162,7 @@ http://www.glyphicons.com/
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="License" id="KQE-dk-Ahe"/>
+                    <navigationItem key="navigationItem" title="ライセンス表記" id="KQE-dk-Ahe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11S-CF-7zu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -176,7 +176,7 @@ http://www.glyphicons.com/
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="g6M-B4-rW7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="iPhoneからの投稿" id="g6M-B4-rW7">
                                 <rect key="frame" x="20" y="162" width="728" height="356"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -187,14 +187,14 @@ http://www.glyphicons.com/
                                 <rect key="frame" x="184" y="584" width="400" height="356"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Article title:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jR-f1-WmY">
-                                <rect key="frame" x="20" y="66" width="84" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="記事のタイトル：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7jR-f1-WmY">
+                                <rect key="frame" x="20" y="66" width="136" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" id="YNo-J8-Xeg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" minimumFontSize="17" id="YNo-J8-Xeg">
                                 <rect key="frame" x="20" y="95" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -203,8 +203,8 @@ http://www.glyphicons.com/
                                     <action selector="doneTextEditing:" destination="LbT-tk-oUj" eventType="editingDidEnd" id="GKl-kE-XAn"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Article body:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mUM-ED-7J9">
-                                <rect key="frame" x="20" y="133" width="102" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="本文：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mUM-ED-7J9">
+                                <rect key="frame" x="20" y="133" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
