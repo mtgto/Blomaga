@@ -56,9 +56,15 @@
     }];
 }
 
-- (void)sendImageData:(NSData *)imageData channelId:(NSString *)channelId articleId:(NSString *)articleId token:(NSString *)token time:(NSString *)time success:(void (^)(NicoAPIClient *client, NSString *imageUrl))success failure:(void (^)(NicoAPIClient *client))failure
+- (void)sendImageData:(NSData *)imageData
+            channelId:(NSString *)channelId
+            articleId:(NSString *)articleId
+                token:(NSString *)token
+                 time:(NSString *)time
+              success:(void (^)(NicoAPIClient *client, NSString *imageUrl))success
+             progress:(void (^)(NicoAPIClient *client, long long totalBytesWritten, long long totalBytesExpectedToWrite))progress
+              failure:(void (^)(NicoAPIClient *client))failure
 {
-    id hoge = imageData;
     NSMutableURLRequest *request = [self.apiClient multipartFormRequestWithMethod:@"POST"
                                                                              path:@"/api/blomaga/upload.articleimage"
                                                                        parameters:nil
@@ -77,10 +83,15 @@
         DDLogVerbose(@"failure: %@", error);
         failure(self);
     }];
+    [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+        progress(self, totalBytesWritten, totalBytesExpectedToWrite);
+    }];
     [operation start];
 }
 
-- (void)sendArticle:(Article *)article success:(void (^)(NicoAPIClient *client))success failure:(void (^)(NicoAPIClient *client))failure
+- (void)sendArticle:(Article *)article
+            success:(void (^)(NicoAPIClient *client, NSURL *nextUrl))success
+            failure:(void (^)(NicoAPIClient *client))failure;
 {
     NSDictionary *parameters = @{
     @"article_id": article.articleId,
@@ -110,8 +121,10 @@
                      success:^(AFHTTPRequestOperation *operation, id responseObject) {
                          DDLogVerbose(@"success: %@", responseObject);
                          NSString *html = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-                         DDLogVerbose(@"html = %@", html);
-                         success(self);
+                         NSInteger statusCode = operation.response.statusCode;
+                         NSURL *nextUrl = operation.response.URL;
+                         DDLogVerbose(@"code = %d, nextUrl = %@, html = %@", statusCode, nextUrl, html);
+                         success(self, nextUrl);
                      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                          DDLogVerbose(@"failure: %@", error);
                          failure(self);
