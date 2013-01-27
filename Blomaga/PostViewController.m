@@ -85,11 +85,15 @@
                                if ([nextUrl.path hasPrefix:@"/tool/blomaga/edit"]) {
                                    hud.labelText = @"投稿に失敗しました";
                                    hud.progress = 1.0f;
+                                   hud.mode = MBProgressHUDModeCustomView;
+                                   hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fail.png"]];
                                    [hud hide:YES afterDelay:1.0f];
                                } else {
                                    hud.labelText = @"完了";
                                    hud.progress = 1.0f;
                                    [hud hide:YES afterDelay:1.0f];
+                                   hud.mode = MBProgressHUDModeCustomView;
+                                   hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
                                    [self.navigationController dismissViewControllerAnimated:YES completion:^{
 
                                    }];
@@ -97,8 +101,10 @@
                            });
                        } failure:^(NicoAPIClient *client) {
                            dispatch_async(dispatch_get_main_queue(), ^{
-                               hud.labelText = @"失敗しました";
+                               hud.labelText = @"投稿に失敗しました";
                                hud.progress = 1.0f;
+                               hud.mode = MBProgressHUDModeCustomView;
+                               hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fail.png"]];
                                [hud hide:YES afterDelay:1.0f];
                            });
                        }];
@@ -124,6 +130,8 @@
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     hud.labelText = @"失敗しました";
                                     hud.progress = 1.0f;
+                                    hud.mode = MBProgressHUDModeCustomView;
+                                    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fail.png"]];
                                     [hud hide:YES afterDelay:1.0f];
                                 });
                             }];

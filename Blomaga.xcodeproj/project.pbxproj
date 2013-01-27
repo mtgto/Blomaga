@@ -36,8 +36,8 @@
 		CEA261D516B580D8005793E6 /* glyphicons_211_right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261D316B580D8005793E6 /* glyphicons_211_right_arrow.png */; };
 		CEA261D816B5811C005793E6 /* glyphicons_020_home.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261D716B5811C005793E6 /* glyphicons_020_home.png */; };
 		CEA261DA16B581CA005793E6 /* glyphicons_195_circle_info.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261D916B581CA005793E6 /* glyphicons_195_circle_info.png */; };
-		CEA261DD16B5824C005793E6 /* glyphicons_206_ok_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261DB16B5824C005793E6 /* glyphicons_206_ok_2.png */; };
-		CEA261DE16B5824C005793E6 /* glyphicons_207_remove_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261DC16B5824C005793E6 /* glyphicons_207_remove_2.png */; };
+		CEA261E016B5887F005793E6 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261DF16B5887F005793E6 /* ok.png */; };
+		CEA261E216B58898005793E6 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA261E116B58898005793E6 /* fail.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +83,8 @@
 		CEA261D916B581CA005793E6 /* glyphicons_195_circle_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_195_circle_info.png; sourceTree = "<group>"; };
 		CEA261DB16B5824C005793E6 /* glyphicons_206_ok_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_206_ok_2.png; sourceTree = "<group>"; };
 		CEA261DC16B5824C005793E6 /* glyphicons_207_remove_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glyphicons_207_remove_2.png; sourceTree = "<group>"; };
+		CEA261DF16B5887F005793E6 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		CEA261E116B58898005793E6 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		F9EADD1B8C5E4896B198D084 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,8 @@
 				CEA2616816B39601005793E6 /* chooseImage.png */,
 				CEA261D716B5811C005793E6 /* glyphicons_020_home.png */,
 				CEA261D916B581CA005793E6 /* glyphicons_195_circle_info.png */,
+				CEA261DF16B5887F005793E6 /* ok.png */,
+				CEA261E116B58898005793E6 /* fail.png */,
 				CEA261DB16B5824C005793E6 /* glyphicons_206_ok_2.png */,
 				CEA261DC16B5824C005793E6 /* glyphicons_207_remove_2.png */,
 				CEA261D216B580D8005793E6 /* glyphicons_210_left_arrow.png */,
@@ -292,8 +296,8 @@
 				CEA261D516B580D8005793E6 /* glyphicons_211_right_arrow.png in Resources */,
 				CEA261D816B5811C005793E6 /* glyphicons_020_home.png in Resources */,
 				CEA261DA16B581CA005793E6 /* glyphicons_195_circle_info.png in Resources */,
-				CEA261DD16B5824C005793E6 /* glyphicons_206_ok_2.png in Resources */,
-				CEA261DE16B5824C005793E6 /* glyphicons_207_remove_2.png in Resources */,
+				CEA261E016B5887F005793E6 /* ok.png in Resources */,
+				CEA261E216B58898005793E6 /* fail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
