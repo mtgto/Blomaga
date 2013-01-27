@@ -25,13 +25,13 @@
                                 <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Home" id="gAn-Mq-VK3"/>
+                                    <barButtonItem image="glyphicons_020_home.png" style="plain" id="gAn-Mq-VK3"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gqk-TJ-A0Y"/>
-                                    <barButtonItem systemItem="rewind" id="hy0-v1-DSy"/>
+                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="hy0-v1-DSy"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4fH-Vi-dPm"/>
-                                    <barButtonItem systemItem="fastForward" id="TT3-fC-dge"/>
+                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="TT3-fC-dge"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="I1O-Mp-NtI"/>
-                                    <barButtonItem title="Info" id="co9-fP-tJh">
+                                    <barButtonItem image="glyphicons_195_circle_info.png" style="plain" id="co9-fP-tJh">
                                         <connections>
                                             <segue destination="tbD-lc-SIT" kind="push" id="GDA-At-4JK"/>
                                         </connections>
@@ -245,6 +245,10 @@ http://www.glyphicons.com/
     </scenes>
     <resources>
         <image name="chooseImage.png" width="280" height="210"/>
+        <image name="glyphicons_020_home.png" width="27" height="26"/>
+        <image name="glyphicons_195_circle_info.png" width="26" height="26"/>
+        <image name="glyphicons_210_left_arrow.png" width="20" height="18"/>
+        <image name="glyphicons_211_right_arrow.png" width="20" height="18"/>
     </resources>
     <classes>
         <class className="PostViewController" superclassName="UIViewController">
