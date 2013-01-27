@@ -21,6 +21,23 @@
                                     <outlet property="delegate" destination="2" id="BsD-k1-EzD"/>
                                 </connections>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="blackOpaque" id="aC9-A0-Y8e">
+                                <rect key="frame" x="0.0" y="460" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Home" id="gAn-Mq-VK3"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Gqk-TJ-A0Y"/>
+                                    <barButtonItem systemItem="rewind" id="hy0-v1-DSy"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4fH-Vi-dPm"/>
+                                    <barButtonItem systemItem="fastForward" id="TT3-fC-dge"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="I1O-Mp-NtI"/>
+                                    <barButtonItem title="Info" id="co9-fP-tJh">
+                                        <connections>
+                                            <segue destination="tbD-lc-SIT" kind="push" id="GDA-At-4JK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -43,6 +60,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="481" y="172"/>
+        </scene>
+        <!--View Controller - ライセンス表記-->
+        <scene sceneID="62D-JC-dtP">
+            <objects>
+                <viewController id="tbD-lc-SIT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CJE-cM-pCy">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Dfk-bk-24d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">AFNetworking
+
+Copyright (c) 2011 Gowalla (http://gowalla.com/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+----
+
+CocoaLumberjack
+
+Software License Agreement (BSD License)
+
+Copyright (c) 2010, Deusty, LLC
+All rights reserved.
+
+Redistribution and use of this software in source and binary forms,
+with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above
+  copyright notice, this list of conditions and the
+  following disclaimer.
+
+* Neither the name of Deusty nor the names of its
+  contributors may be used to endorse or promote products
+  derived from this software without specific prior
+  written permission of Deusty, LLC.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----
+
+MBProgressHUD is distributed under the terms and conditions of the MIT license.
+
+----
+
+UIImage-Resize
+
+Copyright (c) 2010 Olivier Halligon
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+----
+
+GLYPHICONS
+http://www.glyphicons.com/
+
+</string>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ライセンス表記" id="lLf-7d-UH7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5y-Iy-dxq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="833"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="Jtq-y7-8RO">
