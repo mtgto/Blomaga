@@ -30,6 +30,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"PostSegue"]) {
+        PostViewController *postViewController = [segue destinationViewController];
+        postViewController.delegate = self;
+    }
+}
+
 - (IBAction)pushHome:(id)sender {
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
 }
@@ -57,5 +65,12 @@
     DDLogVerbose(@"webView webViewDidFinishLoad");
     NSString* title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     self.title = title;
+}
+
+#pragma mark - PostURLDelegate
+
+- (void)goUrl:(NSURL *)url
+{
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
 }
 @end

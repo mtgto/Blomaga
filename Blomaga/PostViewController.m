@@ -97,9 +97,8 @@
                                    [hud hide:YES afterDelay:1.0f];
                                    hud.mode = MBProgressHUDModeCustomView;
                                    hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
-                                   [self.parentViewController dismissViewControllerAnimated:YES completion:^{
-
-                                   }];
+                                   [self.navigationController popViewControllerAnimated:YES];
+                                   [self.delegate goUrl:nextUrl];
                                }
                            });
                        } failure:^(NicoAPIClient *client) {

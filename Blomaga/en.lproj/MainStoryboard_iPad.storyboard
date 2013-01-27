@@ -52,7 +52,7 @@
                     <navigationItem key="navigationItem" id="uwh-Ih-O52">
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="fZe-jU-vfc">
                             <connections>
-                                <segue destination="LbT-tk-oUj" kind="push" id="9ve-WL-4VB"/>
+                                <segue destination="LbT-tk-oUj" kind="push" identifier="PostSegue" id="9ve-WL-4VB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -253,25 +253,6 @@ http://www.glyphicons.com/
         <image name="glyphicons_210_left_arrow.png" width="20" height="18"/>
         <image name="glyphicons_211_right_arrow.png" width="20" height="18"/>
     </resources>
-    <classes>
-        <class className="PostViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PostViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="doneTextEditing:"/>
-                <relationship kind="action" name="pushPost:"/>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushHome:"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

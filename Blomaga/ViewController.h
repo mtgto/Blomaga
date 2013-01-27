@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostViewController.h"
 
-@interface ViewController : UIViewController<UIWebViewDelegate>
+@interface ViewController : UIViewController<UIWebViewDelegate, PostURLDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 - (IBAction)pushHome:(id)sender;
 
