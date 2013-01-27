@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSDictionary *parameters;
 
 @property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, strong) UIPopoverController *imagePopoverController;
 @end
 
 @implementation PostViewController
@@ -156,9 +158,16 @@
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self.navigationController presentViewController:picker animated:YES completion:^{
-
-    }];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.imagePopoverController = [[UIPopoverController alloc] initWithContentViewController:picker];
+        [self.imagePopoverController presentPopoverFromBarButtonItem:sender
+                                   permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                   animated:YES];
+    } else {
+        [self.navigationController presentViewController:picker animated:YES completion:^{
+            
+        }];
+    }
 }
 
 #pragma mark - UIImagePickerControllerDelegate
@@ -166,28 +175,15 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     DDLogVerbose(@"didFinishPickingMediaWithInfo");
-    [self dismissViewControllerAnimated:YES completion:^{
-        UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-        self.image = [originalImage resizedImageToFitInSize:CGSizeMake(800.f, 800.f) scaleIfSmaller:NO];
-        self.imageView.image = self.image;
-        /*
-        NSData *data = UIImageJPEGRepresentation(originalImage, 0.5f);
-        NicoAPIClient *apiClient = [[NicoAPIClient alloc] init];
-        [apiClient sendImageData:data
-                       channelId:self.parameters[@"channel_id"]
-                       articleId:self.parameters[@"article_id"]
-                           token:self.parameters[@"key"]
-                            time:self.parameters[@"time"]
-                         success:^(NicoAPIClient *client, NSString *imageUrl) {
-                             self.imageUrl = imageUrl;
-        }
-         progress:^(NicoAPIClient *client, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-             
-         } failure:^(NicoAPIClient *client) {
-
-         }];
-         */
-    }];
+    UIImage *originalImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.image = [originalImage resizedImageToFitInSize:CGSizeMake(800.f, 800.f) scaleIfSmaller:NO];
+    self.imageView.image = self.image;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [self.imagePopoverController dismissPopoverAnimated:YES];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    }
 }
 
 
