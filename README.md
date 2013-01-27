@@ -12,6 +12,7 @@ Blomaga is using below OSS libraries. For detail, see [ACKNOWLEDGE.txt](https://
 - [CocoaLumberjack](https://github.com/robbiehanson/CocoaLumberjack)
 - [MBProgressHUD](https://github.com/jdg/MBProgressHUD)
 - [UIImage+Resize](https://github.com/AliSoftware/UIImage-Resize)
+- [Lambda-Alert](https://github.com/zoul/Lambda-Alert/)
 - [GHUnit](https://github.com/gabriel/gh-unit)
 - [OCMock](http://ocmock.org/)
 - [GLYPHICONS](http://glyphicons.com/)

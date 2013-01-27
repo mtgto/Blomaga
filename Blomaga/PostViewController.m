@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "UIImage+Resize.h"
 #import "MBProgressHUD.h"
+#import "CCAlertView.h"
 
 @interface PostViewController ()
 
@@ -48,7 +49,13 @@
     [apiClient getNewArticleSuccess:^(NicoAPIClient *client, NSDictionary *parameters) {
         if (!parameters[@"article_id"]) {
             // No authentication to write new article
-            
+            CCAlertView *alert = [[CCAlertView alloc]
+                                  initWithTitle:@"作成不可"
+                                  message:@"新規記事を作成できません。ログインしているか確認してください。"];
+            [alert addButtonWithTitle:@"OK" block:^{
+                [self.navigationController popViewControllerAnimated:YES];
+            }];
+            [alert show];
         }
         self.parameters = parameters;
         DDLogVerbose(@"success");

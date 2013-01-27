@@ -4,6 +4,7 @@ pod 'AFNetworking',  '~> 1.1.0'
 pod 'CocoaLumberjack', '~> 1.6'
 pod 'MBProgressHUD', '~> 0.5'
 pod 'UIImage-Resize', '~> 0.1'
+pod 'Lambda-Alert', '~> 1.0.0'
 
 target :Tests, :exclusive => true do
   pod 'GHUnitIOS', '~> 0.5.6'
