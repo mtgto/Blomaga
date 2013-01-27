@@ -22,9 +22,17 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="hS2-WT-Ic8"/>
-                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="UZc-Q8-wJz"/>
+                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="UZc-Q8-wJz">
+                                        <connections>
+                                            <action selector="goBack" destination="gM7-EW-0S0" id="rkF-65-lPq"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="cw8-YW-sXT"/>
-                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="xEK-9x-XS9"/>
+                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="xEK-9x-XS9">
+                                        <connections>
+                                            <action selector="goForward" destination="gM7-EW-0S0" id="yMv-1e-qBu"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qc9-eE-sbO"/>
                                     <barButtonItem image="glyphicons_195_circle_info.png" style="plain" id="JLl-wf-3Lt">
                                         <connections>

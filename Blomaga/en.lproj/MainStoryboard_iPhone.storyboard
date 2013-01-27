@@ -31,9 +31,17 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Gqk-TJ-A0Y"/>
-                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="hy0-v1-DSy"/>
+                                    <barButtonItem image="glyphicons_210_left_arrow.png" style="plain" id="hy0-v1-DSy">
+                                        <connections>
+                                            <action selector="goBack" destination="zch-gB-W7P" id="NBu-BY-tUy"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4fH-Vi-dPm"/>
-                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="TT3-fC-dge"/>
+                                    <barButtonItem image="glyphicons_211_right_arrow.png" style="plain" id="TT3-fC-dge">
+                                        <connections>
+                                            <action selector="goForward" destination="zch-gB-W7P" id="dRY-R1-xsx"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="I1O-Mp-NtI"/>
                                     <barButtonItem image="glyphicons_195_circle_info.png" style="plain" id="co9-fP-tJh">
                                         <connections>
@@ -249,6 +257,25 @@ http://www.glyphicons.com/
         <image name="glyphicons_210_left_arrow.png" width="20" height="18"/>
         <image name="glyphicons_211_right_arrow.png" width="20" height="18"/>
     </resources>
+    <classes>
+        <class className="PostViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PostViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneTextEditing:"/>
+                <relationship kind="action" name="pushPost:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushHome:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
