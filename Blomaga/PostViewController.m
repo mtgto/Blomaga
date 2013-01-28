@@ -12,6 +12,7 @@
 #import "UIImage+Resize.h"
 #import "MBProgressHUD.h"
 #import "CCAlertView.h"
+#import "CCActionSheet.h"
 
 @interface PostViewController ()
 
@@ -162,19 +163,41 @@
 
 - (void)imageTapped:(id)sender {
     DDLogVerbose(@"imageTapped");
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    picker.delegate = self;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.imagePopoverController = [[UIPopoverController alloc] initWithContentViewController:picker];
-        [self.imagePopoverController presentPopoverFromBarButtonItem:sender
-                                   permittedArrowDirections:UIPopoverArrowDirectionAny
-                                                   animated:YES];
-    } else {
-        [self.navigationController presentViewController:picker animated:YES completion:^{
-            
+    CCActionSheet *sheet = [[CCActionSheet alloc] initWithTitle:@"画像の選択方法"];
+    if ([UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera]) {
+        [sheet addButtonWithTitle:@"写真を撮る" block:^{
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                self.imagePopoverController = [[UIPopoverController alloc] initWithContentViewController:picker];
+                [self.imagePopoverController presentPopoverFromBarButtonItem:sender
+                                                    permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                                    animated:YES];
+            } else {
+                [self.navigationController presentViewController:picker animated:YES completion:^{
+
+                }];
+            }
         }];
     }
+    [sheet addButtonWithTitle:@"ライブラリから選択" block:^{
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+            self.imagePopoverController = [[UIPopoverController alloc] initWithContentViewController:picker];
+            [self.imagePopoverController presentPopoverFromBarButtonItem:sender
+                                                permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                                animated:YES];
+        } else {
+            [self.navigationController presentViewController:picker animated:YES completion:^{
+                
+            }];
+        }
+    }];
+    [sheet addCancelButtonWithTitle:@"キャンセル"];
+    [sheet showInView:self.view.window];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
