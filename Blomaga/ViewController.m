@@ -20,6 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(pushPost:)];
     self.portalUrl = [NSURL URLWithString:@"http://sp.ch.nicovideo.jp/portal/blomaga"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
 }
@@ -40,6 +41,10 @@
 
 - (IBAction)pushHome:(id)sender {
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
+}
+
+- (void)pushPost:(id)sender {
+    [self performSegueWithIdentifier:@"PostSegue" sender:self];
 }
 
 #pragma mark - UIWebViewDelegate

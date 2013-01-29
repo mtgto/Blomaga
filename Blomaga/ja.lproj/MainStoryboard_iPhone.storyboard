@@ -53,15 +53,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8cN-tL-Sln">
-                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="Imo-g6-brY">
-                            <connections>
-                                <segue destination="nEx-pL-z9v" kind="push" identifier="PostSegue" id="IOX-eo-KUg"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="8cN-tL-Sln"/>
                     <connections>
                         <outlet property="webView" destination="zch-gB-W7P" id="GPN-5K-LTE"/>
+                        <segue destination="nEx-pL-z9v" kind="push" identifier="PostSegue" id="Gea-kf-802"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -281,6 +276,25 @@ http://www.glyphicons.com/
         <image name="glyphicons_210_left_arrow.png" width="20" height="18"/>
         <image name="glyphicons_211_right_arrow.png" width="20" height="18"/>
     </resources>
+    <classes>
+        <class className="PostViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PostViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="doneTextEditing:"/>
+                <relationship kind="action" name="pushPost:"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="titleField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="pushHome:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
