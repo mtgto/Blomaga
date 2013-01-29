@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) NSURL *portalUrl;
 
+@property (nonatomic, strong) NSRegularExpression *titleSuffixRegexp;
+
 @end
 
 @implementation ViewController
@@ -21,6 +23,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(pushPost:)];
+    NSError *error = nil;
+    self.titleSuffixRegexp = [NSRegularExpression regularExpressionWithPattern:@" - (ニコニコチャンネル|ブロマガ)$"
+                                                                       options:NSRegularExpressionCaseInsensitive
+                                                                         error:&error];
     self.portalUrl = [NSURL URLWithString:@"http://sp.ch.nicovideo.jp/portal/blomaga"];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
 }
@@ -68,7 +74,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     DDLogVerbose(@"webView webViewDidFinishLoad");
-    NSString* title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    title = [self.titleSuffixRegexp stringByReplacingMatchesInString:title options:0 range:NSMakeRange(0, [title length]) withTemplate:@""];
     self.title = title;
 }
 
