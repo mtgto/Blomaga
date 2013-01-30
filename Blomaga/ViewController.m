@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSRegularExpression *titleSuffixRegexp;
 
+@property (nonatomic, weak) UIRefreshControl *refreshControl;
+
 @end
 
 @implementation ViewController
@@ -28,6 +30,12 @@
                                                                        options:NSRegularExpressionCaseInsensitive
                                                                          error:&error];
     self.portalUrl = [NSURL URLWithString:@"http://sp.ch.nicovideo.jp/portal/blomaga"];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"引き下げて更新"];
+    self.refreshControl = refreshControl;
+    [refreshControl addTarget:self action:@selector(refreshAction:) forControlEvents:UIControlEventValueChanged];
+
+    [self.webView.scrollView addSubview:self.refreshControl];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
 }
 
@@ -53,6 +61,11 @@
     [self performSegueWithIdentifier:@"PostSegue" sender:self];
 }
 
+- (void)refreshAction:(id)sender {
+    [self.refreshControl beginRefreshing];
+    [self.webView reload];
+}
+
 #pragma mark - UIWebViewDelegate
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
@@ -74,6 +87,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     DDLogVerbose(@"webView webViewDidFinishLoad");
+    [self.refreshControl endRefreshing];
     NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     title = [self.titleSuffixRegexp stringByReplacingMatchesInString:title options:0 range:NSMakeRange(0, [title length]) withTemplate:@""];
     self.title = title;
