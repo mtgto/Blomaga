@@ -37,6 +37,7 @@
 
     [self.webView.scrollView addSubview:self.refreshControl];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
+    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
 }
 
 - (void)didReceiveMemoryWarning

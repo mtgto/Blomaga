@@ -6,6 +6,7 @@ PODS:
 - Lambda-Alert (1.0.0)
 - MBProgressHUD (0.5)
 - OCMock (2.0.1)
+- SSKeychain (0.2.1)
 - UIImage-Resize (0.1)
 
 DEPENDENCIES:
@@ -15,6 +16,7 @@ DEPENDENCIES:
 - Lambda-Alert (~> 1.0.0)
 - MBProgressHUD (~> 0.5)
 - OCMock (~> 2.0.1)
+- SSKeychain (~> 0.2.1)
 - UIImage-Resize (~> 0.1)
 
 SPEC CHECKSUMS:
@@ -22,6 +24,7 @@ SPEC CHECKSUMS:
   CocoaLumberjack: 0f2fa7090a23f13261072d882e017c688300efbe
   Lambda-Alert: 16cac975568b71cd2940df8ca9cadb87882baae2
   MBProgressHUD: b23ee11c42253d6d804e8e0bfabdc334e8b2571f
+  SSKeychain: ffa1a79eb716d9ed1ca184fb0cf218087ca28486
   UIImage-Resize: 8372efb7144f060a3482c8915388829787fe4b7c
   GHUnitIOS: bf149b2c44084eee2785ce4ac3675c3a699e509d
   OCMock: 77a9c4c57af6bf258a537d34cf09abf422affede

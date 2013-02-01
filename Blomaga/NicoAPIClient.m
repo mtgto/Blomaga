@@ -8,10 +8,12 @@
 
 #import "NicoAPIClient.h"
 #import "AFNicoAPIClient.h"
+#import "AFSecureNicoAPIClient.h"
 #import <AFNetworking/AFNetworking.h>
 
 @interface NicoAPIClient()
 @property (nonatomic, strong) AFNicoAPIClient *apiClient;
+@property (nonatomic, strong) AFSecureNicoAPIClient *secureApiClient;
 @end
 
 @implementation NicoAPIClient
@@ -21,8 +23,29 @@
     self = [super init];
     if (self) {
         self.apiClient = [AFNicoAPIClient sharedClient];
+        self.secureApiClient = [AFSecureNicoAPIClient sharedClient];
     }
     return self;
+}
+
+- (void)loginWithMail:(NSString *)mail
+             password:(NSString *)password
+              success:(void (^)(NicoAPIClient *client, NSURL *nextUrl))success
+              failure:(void (^)(NicoAPIClient *client))failure
+{
+    NSDictionary *parameters = @{@"next_url": @"/portal/blomaga?header",
+                                 @"mail": mail,
+                                 @"password": password};
+    [self.secureApiClient postPath:@"/secure/login?site=channel"
+                        parameters:parameters
+                           success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                               NSInteger statusCode = operation.response.statusCode;
+                               NSURL *nextUrl = operation.response.URL;
+                               DDLogVerbose(@"login success code = %d, nextUrl = %@", statusCode, nextUrl);
+                               success(self, nextUrl);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        failure(self);
+    }];
 }
 
 - (void)getNewArticleSuccess:(void (^)(NicoAPIClient *client, NSDictionary *parameters))success failure:(void (^)(NicoAPIClient *client))failure

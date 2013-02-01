@@ -11,6 +11,11 @@
 
 @interface NicoAPIClient : NSObject
 
+- (void)loginWithMail:(NSString *)mail
+             password:(NSString *)password
+              success:(void (^)(NicoAPIClient *client, NSURL *nextUrl))success
+              failure:(void (^)(NicoAPIClient *client))failure;
+
 - (void)getNewArticleSuccess:(void (^)(NicoAPIClient *client, NSDictionary *parameters))success failure:(void (^)(NicoAPIClient *client))failure;
 
 - (void)sendImageData:(NSData *)imageData

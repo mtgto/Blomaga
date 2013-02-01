@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2B48F0E2E74F4509AF6B049E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9EADD1B8C5E4896B198D084 /* libPods.a */; };
 		66F9F877A1D74F92B798A5D0 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E41B217597443AB86E8D46 /* libPods-Tests.a */; };
+		CE97E7A816BACB780099157E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97E7A716BACB780099157E /* LoginViewController.m */; };
+		CE97E7AB16BC249C0099157E /* AFSecureNicoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */; };
 		CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
 		CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
 		CEA2610816B37945005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2610616B37945005793E6 /* InfoPlist.strings */; };
@@ -44,6 +46,10 @@
 		0429C3FFB1C94A4B9AC787D1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		41E41B217597443AB86E8D46 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C19635D4D3430B808ECE0F /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		CE97E7A616BACB780099157E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CE97E7A716BACB780099157E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE97E7A916BC249C0099157E /* AFSecureNicoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecureNicoAPIClient.h; sourceTree = "<group>"; };
+		CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecureNicoAPIClient.m; sourceTree = "<group>"; };
 		CEA260F916B37945005793E6 /* Blomaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blomaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA260FD16B37945005793E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA260FF16B37945005793E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,6 +166,10 @@
 				CEA2611C16B37945005793E6 /* ViewController.m */,
 				CEA2616416B3932F005793E6 /* PostViewController.h */,
 				CEA2616516B3932F005793E6 /* PostViewController.m */,
+				CE97E7A616BACB780099157E /* LoginViewController.h */,
+				CE97E7A716BACB780099157E /* LoginViewController.m */,
+				CE97E7A916BC249C0099157E /* AFSecureNicoAPIClient.h */,
+				CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */,
 				CEA2617416B3A33C005793E6 /* AFNicoAPIClient.h */,
 				CEA2617516B3A33C005793E6 /* AFNicoAPIClient.m */,
 				CEA2617116B39F7F005793E6 /* Article.h */,
@@ -358,6 +368,8 @@
 				CEA2617016B39DCA005793E6 /* NicoAPIClient.m in Sources */,
 				CEA2617316B39F7F005793E6 /* Article.m in Sources */,
 				CEA2617616B3A33C005793E6 /* AFNicoAPIClient.m in Sources */,
+				CE97E7A816BACB780099157E /* LoginViewController.m in Sources */,
+				CE97E7AB16BC249C0099157E /* AFSecureNicoAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
