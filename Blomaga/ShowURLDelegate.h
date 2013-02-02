@@ -12,4 +12,6 @@
 
 - (void)goUrl:(NSURL *)url;
 
+- (void)setPostButtonVisible:(BOOL)isVisible;
+
 @end

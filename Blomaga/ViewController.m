@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PostViewController.h"
+#import "LoginViewController.h"
 
 @interface ViewController ()
 
@@ -25,7 +26,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(pushPost:)];
     NSError *error = nil;
     self.titleSuffixRegexp = [NSRegularExpression regularExpressionWithPattern:@" - (ニコニコチャンネル|ブロマガ)$"
                                                                        options:NSRegularExpressionCaseInsensitive
@@ -52,6 +52,9 @@
     if ([segue.identifier isEqualToString:@"PostSegue"]) {
         PostViewController *postViewController = [segue destinationViewController];
         postViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"LoginSegue"]) {
+        LoginViewController *loginViewController = [segue destinationViewController];
+        loginViewController.delegate = self;
     }
 }
 
@@ -73,6 +76,12 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     DDLogVerbose(@"webView shouldStartLoadWithRequest:%@ type:%d", request, navigationType);
+    if ([request.URL.scheme isEqualToString:@"https"] &&
+         [request.URL.host isEqualToString:@"secure.nicovideo.jp"] &&
+        [request.URL.path hasPrefix:@"/secure/login_form"]) {
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+        return NO;
+    }
     return YES;
 }
 
@@ -100,5 +109,13 @@
 - (void)goUrl:(NSURL *)url
 {
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
+- (void)setPostButtonVisible:(BOOL)isVisible
+{
+    self.navigationItem.rightBarButtonItem = nil;
+    if (isVisible) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(pushPost:)];
+    }
 }
 @end

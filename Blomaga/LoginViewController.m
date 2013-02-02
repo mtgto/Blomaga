@@ -72,6 +72,7 @@ NSString* const serviceName = @"blomaga";
                           }
                           [SSKeychain setPassword:password forService:serviceName account:mailAddress];
                           [hud hide:YES afterDelay:1.0f];
+                          [self.delegate setPostButtonVisible:YES];
                           [self.delegate goUrl:nextUrl];
                           [self dismissViewControllerAnimated:YES completion:^{
                               ;
@@ -94,6 +95,7 @@ NSString* const serviceName = @"blomaga";
 }
 
 - (IBAction)pushNoLogin:(id)sender {
+    [self.delegate setPostButtonVisible:NO];
     [self dismissViewControllerAnimated:YES completion:^{
 
     }];
