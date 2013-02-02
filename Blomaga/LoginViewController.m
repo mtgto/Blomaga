@@ -2,7 +2,7 @@
 //  LoginViewController.m
 //  Blomaga
 //
-//  Created by User on 2/1/13.
+//  Created by mtgto on 2/1/13.
 //  Copyright (c) 2013 mtgto. All rights reserved.
 //
 
@@ -72,6 +72,7 @@ NSString* const serviceName = @"blomaga";
                           }
                           [SSKeychain setPassword:password forService:serviceName account:mailAddress];
                           [hud hide:YES afterDelay:1.0f];
+                          [self.delegate goUrl:nextUrl];
                           [self dismissViewControllerAnimated:YES completion:^{
                               ;
                           }];

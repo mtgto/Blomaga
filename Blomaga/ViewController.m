@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PostViewController.h"
 
 @interface ViewController ()
 

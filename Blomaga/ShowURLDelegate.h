@@ -10,4 +10,6 @@
 
 @protocol ShowURLDelegate <NSObject>
 
+- (void)goUrl:(NSURL *)url;
+
 @end

@@ -56,6 +56,7 @@
 		CE97E7AC16BCCD6C0099157E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		CE97E7AE16BCCD6E0099157E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
 		CE97E7B016BD12FE0099157E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CE97E7B216BD1F720099157E /* ShowURLDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShowURLDelegate.h; sourceTree = "<group>"; };
 		CEA260F916B37945005793E6 /* Blomaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blomaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA260FD16B37945005793E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA260FF16B37945005793E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -170,6 +171,7 @@
 				CEA2610D16B37945005793E6 /* AppDelegate.m */,
 				CEA2611516B37945005793E6 /* MainStoryboard_iPhone.storyboard */,
 				CEA2611816B37945005793E6 /* MainStoryboard_iPad.storyboard */,
+				CE97E7B216BD1F720099157E /* ShowURLDelegate.h */,
 				CEA2611B16B37945005793E6 /* ViewController.h */,
 				CEA2611C16B37945005793E6 /* ViewController.m */,
 				CEA2616416B3932F005793E6 /* PostViewController.h */,
