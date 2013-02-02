@@ -13,6 +13,7 @@
 		CE97E7AB16BC249C0099157E /* AFSecureNicoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */; };
 		CE97E7AD16BCCD6C0099157E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE97E7AC16BCCD6C0099157E /* Icon-72.png */; };
 		CE97E7AF16BCCD6E0099157E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE97E7AE16BCCD6E0099157E /* Icon-72@2x.png */; };
+		CE97E7B116BD12FE0099157E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97E7B016BD12FE0099157E /* Security.framework */; };
 		CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
 		CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
 		CEA2610816B37945005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2610616B37945005793E6 /* InfoPlist.strings */; };
@@ -54,6 +55,7 @@
 		CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecureNicoAPIClient.m; sourceTree = "<group>"; };
 		CE97E7AC16BCCD6C0099157E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		CE97E7AE16BCCD6E0099157E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
+		CE97E7B016BD12FE0099157E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CEA260F916B37945005793E6 /* Blomaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blomaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA260FD16B37945005793E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA260FF16B37945005793E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE97E7B116BD12FE0099157E /* Security.framework in Frameworks */,
 				CEA2618416B3A758005793E6 /* CoreGraphics.framework in Frameworks */,
 				CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */,
 				CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */,
@@ -150,6 +153,7 @@
 		CEA260FC16B37945005793E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE97E7B016BD12FE0099157E /* Security.framework */,
 				CEA2618316B3A758005793E6 /* CoreGraphics.framework */,
 				CEA260FD16B37945005793E6 /* UIKit.framework */,
 				CEA260FF16B37945005793E6 /* Foundation.framework */,

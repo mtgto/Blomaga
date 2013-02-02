@@ -9,6 +9,9 @@
 #import "LoginViewController.h"
 #import "NicoAPIClient.h"
 #import "MBProgressHUD.h"
+#import "SSKeychain.h"
+
+NSString* const serviceName = @"blomaga";
 
 @interface LoginViewController ()
 
@@ -29,6 +32,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    NSArray *mailAddresses = [SSKeychain accountsForService:serviceName];
+    DDLogVerbose(@"mailAddresses = %@", mailAddresses);
+    if ([mailAddresses count]) {
+        NSString *mailAddress = mailAddresses[0][kSSKeychainAccountKey];
+        NSString *password = [SSKeychain passwordForService:serviceName account:mailAddress];
+        self.mailAddressField.text = mailAddress;
+        self.passwordField.text = password;
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,16 +49,28 @@
 }
 
 - (IBAction)pushLogin:(id)sender {
+    if ([self.mailAddressField isFirstResponder]) {
+        [self.mailAddressField resignFirstResponder];
+    }
+    if ([self.passwordField isFirstResponder]) {
+        [self.passwordField resignFirstResponder];
+    }
     NicoAPIClient *client = [[NicoAPIClient alloc] init];
+    NSString *mailAddress = self.mailAddressField.text;
+    NSString *password = self.passwordField.text;
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    [client loginWithMail:self.mailAddressField.text
-                 password:self.passwordField.text
+    [client loginWithMail:mailAddress
+                 password:password
                   success:^(NicoAPIClient *client, NSURL *nextUrl) {
                       if (![nextUrl.host isEqualToString:@"secure.nicovideo.jp"]) {
                           hud.labelText = @"ログイン完了";
                           hud.progress = 1.0f;
                           hud.mode = MBProgressHUDModeCustomView;
                           hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ok.png"]];
+                          for (NSString *account in [SSKeychain accountsForService:serviceName]) {
+                              [SSKeychain deletePasswordForService:serviceName account:account];
+                          }
+                          [SSKeychain setPassword:password forService:serviceName account:mailAddress];
                           [hud hide:YES afterDelay:1.0f];
                           [self dismissViewControllerAnimated:YES completion:^{
                               ;
