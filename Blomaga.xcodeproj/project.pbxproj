@@ -11,6 +11,8 @@
 		66F9F877A1D74F92B798A5D0 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E41B217597443AB86E8D46 /* libPods-Tests.a */; };
 		CE97E7A816BACB780099157E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97E7A716BACB780099157E /* LoginViewController.m */; };
 		CE97E7AB16BC249C0099157E /* AFSecureNicoAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */; };
+		CE97E7AD16BCCD6C0099157E /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE97E7AC16BCCD6C0099157E /* Icon-72.png */; };
+		CE97E7AF16BCCD6E0099157E /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE97E7AE16BCCD6E0099157E /* Icon-72@2x.png */; };
 		CEA260FE16B37945005793E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FD16B37945005793E6 /* UIKit.framework */; };
 		CEA2610016B37945005793E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA260FF16B37945005793E6 /* Foundation.framework */; };
 		CEA2610816B37945005793E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEA2610616B37945005793E6 /* InfoPlist.strings */; };
@@ -50,6 +52,8 @@
 		CE97E7A716BACB780099157E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CE97E7A916BC249C0099157E /* AFSecureNicoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecureNicoAPIClient.h; sourceTree = "<group>"; };
 		CE97E7AA16BC249C0099157E /* AFSecureNicoAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecureNicoAPIClient.m; sourceTree = "<group>"; };
+		CE97E7AC16BCCD6C0099157E /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
+		CE97E7AE16BCCD6E0099157E /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "../Icon-72@2x.png"; sourceTree = "<group>"; };
 		CEA260F916B37945005793E6 /* Blomaga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blomaga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA260FD16B37945005793E6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CEA260FF16B37945005793E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -199,6 +203,8 @@
 				CEA261D316B580D8005793E6 /* glyphicons_211_right_arrow.png */,
 				CEA2618B16B3D124005793E6 /* Icon@2x.png */,
 				CEA2618916B3D111005793E6 /* Icon.png */,
+				CE97E7AE16BCCD6E0099157E /* Icon-72@2x.png */,
+				CE97E7AC16BCCD6C0099157E /* Icon-72.png */,
 				CEA2610F16B37945005793E6 /* Default.png */,
 				CEA2611116B37945005793E6 /* Default@2x.png */,
 				CEA2611316B37945005793E6 /* Default-568h@2x.png */,
@@ -312,6 +318,8 @@
 				CEA261DA16B581CA005793E6 /* glyphicons_195_circle_info.png in Resources */,
 				CEA261E016B5887F005793E6 /* ok.png in Resources */,
 				CEA261E216B58898005793E6 /* fail.png in Resources */,
+				CE97E7AD16BCCD6C0099157E /* Icon-72.png in Resources */,
+				CE97E7AF16BCCD6E0099157E /* Icon-72@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
