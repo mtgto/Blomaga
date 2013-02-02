@@ -220,9 +220,13 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     DDLogVerbose(@"imagePickerControllerDidCancel");
-    [self dismissViewControllerAnimated:YES completion:^{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        [self.imagePopoverController dismissPopoverAnimated:YES];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:^{
 
-    }];
+        }];
+    }
 }
 
 @end
