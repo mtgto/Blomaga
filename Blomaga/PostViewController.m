@@ -52,7 +52,7 @@
             // No authentication to write new article
             CCAlertView *alert = [[CCAlertView alloc]
                                   initWithTitle:@"作成不可"
-                                  message:@"新規記事を作成できません。ログインしているか確認してください。"];
+                                  message:@"新規記事を作成できません。ブロマガのアカウントがあることを確認してください。"];
             [alert addButtonWithTitle:@"OK" block:^{
                 [self.navigationController popViewControllerAnimated:YES];
             }];
