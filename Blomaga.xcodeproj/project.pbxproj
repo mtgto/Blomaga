@@ -49,6 +49,8 @@
 		0429C3FFB1C94A4B9AC787D1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		41E41B217597443AB86E8D46 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C19635D4D3430B808ECE0F /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		CE2B9D4116C6504F00BAFFE9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CE2B9D4316C6505900BAFFE9 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		CE97E7A616BACB780099157E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CE97E7A716BACB780099157E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CE97E7A916BC249C0099157E /* AFSecureNicoAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecureNicoAPIClient.h; sourceTree = "<group>"; };
@@ -154,6 +156,8 @@
 		CEA260FC16B37945005793E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE2B9D4316C6505900BAFFE9 /* MobileCoreServices.framework */,
+				CE2B9D4116C6504F00BAFFE9 /* SystemConfiguration.framework */,
 				CE97E7B016BD12FE0099157E /* Security.framework */,
 				CEA2618316B3A758005793E6 /* CoreGraphics.framework */,
 				CEA260FD16B37945005793E6 /* UIKit.framework */,
