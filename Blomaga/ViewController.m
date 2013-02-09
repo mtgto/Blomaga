@@ -99,6 +99,8 @@
 {
     DDLogVerbose(@"webView webViewDidFinishLoad");
     [self.refreshControl endRefreshing];
+    // hide register link
+    [webView stringByEvaluatingJavaScriptFromString:@"$('a.siteHeaderBtn').hide()"];
     NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
     title = [self.titleSuffixRegexp stringByReplacingMatchesInString:title options:0 range:NSMakeRange(0, [title length]) withTemplate:@""];
     self.title = title;
