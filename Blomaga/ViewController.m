@@ -38,7 +38,15 @@
 
     [self.webView.scrollView addSubview:self.refreshControl];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.portalUrl]];
-    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    DDLogVerbose(@"viewDidAppear");
+    static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+    });
 }
 
 - (void)didReceiveMemoryWarning
