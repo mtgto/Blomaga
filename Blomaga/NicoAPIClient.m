@@ -30,7 +30,7 @@
 
 - (void)loginWithMail:(NSString *)mail
              password:(NSString *)password
-              success:(void (^)(NicoAPIClient *client, NSURL *nextUrl))success
+              success:(void (^)(NicoAPIClient *client, NSURL *nextUrl, BOOL isPremium))success
               failure:(void (^)(NicoAPIClient *client))failure
 {
     NSDictionary *parameters = @{@"next_url": @"/portal/blomaga?header",
@@ -41,8 +41,9 @@
                            success:^(AFHTTPRequestOperation *operation, id responseObject) {
                                NSInteger statusCode = operation.response.statusCode;
                                NSURL *nextUrl = operation.response.URL;
-                               DDLogVerbose(@"login success code = %d, nextUrl = %@", statusCode, nextUrl);
-                               success(self, nextUrl);
+                               BOOL isPremium = [@"3" isEqualToString:operation.response.allHeaderFields[@"x-niconico-authflag"]];
+                               DDLogVerbose(@"login success code = %d, nextUrl = %@, isPremium = %d", statusCode, nextUrl, isPremium);
+                               success(self, nextUrl, isPremium);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         failure(self);
     }];

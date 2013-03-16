@@ -61,8 +61,8 @@ NSString* const serviceName = @"blomaga";
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [client loginWithMail:mailAddress
                  password:password
-                  success:^(NicoAPIClient *client, NSURL *nextUrl) {
-                      if (![nextUrl.host isEqualToString:@"secure.nicovideo.jp"]) {
+                  success:^(NicoAPIClient *client, NSURL *nextUrl, BOOL isPremium) {
+                      if (![nextUrl.host isEqualToString:@"secure.nicovideo.jp"] && isPremium) {
                           hud.labelText = @"ログイン完了";
                           hud.progress = 1.0f;
                           hud.mode = MBProgressHUDModeCustomView;
@@ -92,12 +92,5 @@ NSString* const serviceName = @"blomaga";
                       hud.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fail.png"]];
                       [hud hide:YES afterDelay:1.0f];
                   }];
-}
-
-- (IBAction)pushNoLogin:(id)sender {
-    [self.delegate setPostButtonVisible:NO];
-    [self dismissViewControllerAnimated:YES completion:^{
-
-    }];
 }
 @end

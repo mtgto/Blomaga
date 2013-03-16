@@ -13,7 +13,7 @@
 
 - (void)loginWithMail:(NSString *)mail
              password:(NSString *)password
-              success:(void (^)(NicoAPIClient *client, NSURL *nextUrl))success
+              success:(void (^)(NicoAPIClient *client, NSURL *nextUrl, BOOL isPremium))success
               failure:(void (^)(NicoAPIClient *client))failure;
 
 - (void)getNewArticleSuccess:(void (^)(NicoAPIClient *client, NSDictionary *parameters))success failure:(void (^)(NicoAPIClient *client))failure;
